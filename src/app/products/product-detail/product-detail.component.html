@@ -1,0 +1,18 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <div class="row">
+            <div class="col-xs-6">
+                <h1 class="panel-title">{{ product.name }}</h1>
+                <hr>
+                <img [src]="product.imageUrl" class="contact-image">
+            </div>
+            <div class="col text-right">
+                <button class="btn btn-primary" routerLink="edit">Edit</button>
+                <button class="btn btn-danger" (click)="onDelete()">Delete</button>
+            </div>
+        </div>
+    </div>
+    <div class="panel-body">
+        <h4>{{ product.description }}</h4>
+    </div>
+</div>

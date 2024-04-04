@@ -1,0 +1,48 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <div class="row">
+            <div class="col-xs-6">
+                <h1 class="panel-title text-left">Products</h1>
+            </div>
+            <div class="row">
+                <div class="input-group pull-left pad-left-right col-xs-7">
+                    <!-- Add the search box input field here -->
+                    <input type="text" (ngModel)="term" #searchBox class="form-control" (keyup)="search($event)">
+                    <div class="bi bi-search input-group-addon" (click)="search(searchBox.value)"></div>
+                </div>
+                <div class="pull-right padding-right-md">
+                    <button class="btn btn-success" routerLink="new">New product</button>
+                </div>
+            </div>                
+        </div>
+    </div>
+    <div class="panel-body">
+        <!-- for each contact in contacts, pass to [contact] in contact-item -->
+        <!-- pass the same contact object to the onSelect() method -->
+        <tupper-product-item
+            *ngFor="let product of products"
+            [product]="product"
+        >
+        </tupper-product-item>
+    </div>
+</div>
+
+<!--div class="panel panel-default">
+    <div class="panel-heading">
+        <div class="row pad-left-right">
+            <span class="pull-left title">Products</span>
+            <a class="btn btn-success pull-right" routerLink="new">Add Product</a>
+        </div>
+    </div>
+    <div class="panel-body">
+        <div class="center-panel">
+            <!- -Add tag to display a list of ProductItem components-->
+            <!-- go through all component products, if clicked, pass doc to onSelected() - ->
+            <tupper-product-item
+                *ngFor="let product of products"
+                [product]="product"
+            >
+            </tupper-product-item>
+        </div>
+    </div>
+</div-->

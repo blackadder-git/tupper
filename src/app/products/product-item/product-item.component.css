@@ -1,0 +1,9 @@
+.product-item {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.product-image {
+  border-radius: 20%;
+  width: 8rem;
+}
