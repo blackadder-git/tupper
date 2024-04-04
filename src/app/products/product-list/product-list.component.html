@@ -20,7 +20,7 @@
         <!-- for each contact in contacts, pass to [contact] in contact-item -->
         <!-- pass the same contact object to the onSelect() method -->
         <tupper-product-item
-            *ngFor="let product of products"
+            *ngFor="let product of products | productsFilter:searchBox.value"
             [product]="product"
         >
         </tupper-product-item>

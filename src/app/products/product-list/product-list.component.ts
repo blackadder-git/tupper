@@ -2,6 +2,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Product } from '../product.model';
 import { ProductService } from '../product.service';
 import { Subscription } from 'rxjs';
+import { ProductsFilterPipe } from '../products-filter.pipe';
 
 @Component({
   selector: 'tupper-product-list',
@@ -31,6 +32,7 @@ export class ProductListComponent implements OnInit, OnDestroy {
   }
 
   search(value: string) {
+    console.log("search:", value);
     this.term = value;
   }
 
