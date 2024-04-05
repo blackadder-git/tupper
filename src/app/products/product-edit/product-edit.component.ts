@@ -47,7 +47,7 @@ export class ProductEditComponent implements OnInit {
   onSubmit(form: NgForm) {
     console.log(form.value);
     let value = form.value;
-    let newProduct = new Product("", value.name, value.description, value.imageUrl );
+    let newProduct = new Product("", value.name, value.description, value.imageUrl, value.quantity);
 
     if (this.editMode == true) {
       // Update takes care of assigning the new id

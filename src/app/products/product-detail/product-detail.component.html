@@ -4,7 +4,7 @@
             <div class="col-xs-6">
                 <h1 class="panel-title">{{ product.name }}</h1>
                 <hr>
-                <img [src]="product.imageUrl" class="contact-image">
+                <div>{{ product.quantity }}</div>
             </div>
             <div class="col text-right">
                 <button class="btn btn-primary" routerLink="edit">Edit</button>
@@ -13,6 +13,7 @@
         </div>
     </div>
     <div class="panel-body">
+        <img [src]="product.imageUrl" class="contact-image">
         <h4>{{ product.description }}</h4>
     </div>
 </div>

@@ -154,6 +154,7 @@ export class ProductService {
       .subscribe(
         (responseData) => {
           // replace updated product in products
+          newProduct.id = originalProduct.id;
           this.products[pos] = newProduct;
           // this.sortProducts();
           this.productListChangedEvent.next(this.products.slice()); // pass event to any subscribers

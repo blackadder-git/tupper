@@ -40,7 +40,8 @@ router.post("/", async (req, res) => {
       id: "" + maxProductId,
       name: req.body.name,
       description: req.body.description,
-      imageUrl: req.body.imageUrl
+      imageUrl: req.body.imageUrl,
+      quantity: req.body.quantity
    });
    console.log("New Product", product);
 
@@ -69,6 +70,7 @@ router.put('/:id', (req, res) => {
       product.name = req.body.name;
       product.description = req.body.description;
       product.imageUrl = req.body.imageUrl;
+      product.quantity = req.body.quantity;
  
       Product.updateOne({ id: req.params.id }, product)
       .then(result => {

@@ -31,6 +31,22 @@
                     #description="ngModel">
                 </div>
             </div>
+
+            <div class="row">
+                <div class="col-sm-12 form-group">
+                    <label for="quantity">Quantity:</label>
+                    <input
+                    type="text"
+                    id="quantity"
+                    class="form-control"
+                    size="120"
+                    max="255"
+                    [ngModel]="product?.quantity"
+                    name="quantity"
+                    #quantity="ngModel"
+                    required>
+                </div>
+            </div>            
   
             <div class="row">
                 <div class="col-sm-12 form-group">

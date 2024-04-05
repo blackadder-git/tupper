@@ -7,7 +7,8 @@ const productSchema = mongoose.Schema({
    id: { type: String, required: true },
    name: { type: String, required: true },
    description: { type: String },
-   imageUrl: { type: String }
+   imageUrl: { type: String },
+   quantity: { type: Number }
 });
 
 // Build an object based on the blueprint above
